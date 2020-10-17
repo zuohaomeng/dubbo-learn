@@ -1,0 +1,13 @@
+current:
+  ip: 47.98.133.16
+spring:
+  application:
+    name: dubbo-provider
+
+server:
+  port: 8080
+dubbo:
+  protocol:
+    register: zookeeper://${current.ip}:10001
+    port: 9090
+    name: dubbo
