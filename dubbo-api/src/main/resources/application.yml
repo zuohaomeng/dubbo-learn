@@ -1,11 +1,11 @@
 current:
-  ip: 47.98.133.16
+  ip: 127.0.0.1
 spring:
   application:
     name: dubbo-api
 
 server:
-  port: 8080
+  port: 8081
 dubbo:
-  protocol:
-    register: zookeeper://${current.ip}:10001
+  registry:
+    address: zookeeper://${current.ip}:2181

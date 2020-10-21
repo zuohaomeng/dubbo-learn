@@ -1,13 +1,19 @@
-current:
-  ip: 47.98.133.16
 spring:
   application:
     name: dubbo-provider
 
-server:
-  port: 8080
 dubbo:
+  registry:
+    address: zookeeper://127.0.0.1:2181
+    protocol: zookeeper
   protocol:
-    register: zookeeper://${current.ip}:10001
-    port: 9090
     name: dubbo
+    port: 20880
+#  scan:
+#    base-packages: com.meng.mydubbo.provider.service.impl
+
+logging:
+  level:
+    root: debug
+server:
+  port: 8081
