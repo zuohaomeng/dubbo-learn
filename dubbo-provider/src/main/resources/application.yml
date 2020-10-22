@@ -1,7 +1,8 @@
 spring:
   application:
-    name: dubbo-provider
-
+    name: mydubbo-provider
+server:
+  port: 9999
 dubbo:
   registry:
     address: zookeeper://127.0.0.1:2181
@@ -9,11 +10,11 @@ dubbo:
   protocol:
     name: dubbo
     port: 20880
-#  scan:
-#    base-packages: com.meng.mydubbo.provider.service.impl
+  scan:
+    base-packages: com.meng.dubboprovider
 
 logging:
   level:
-    root: debug
-server:
-  port: 8081
+    root: info
+#    com.meng.daily.mysql.mapper: debug
+
