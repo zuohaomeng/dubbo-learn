@@ -5,7 +5,7 @@ spring:
     name: dubbo-api
 
 server:
-  port: 8082
+  port: 8081
 dubbo:
   registry:
     address: zookeeper://${current.ip}:2181
